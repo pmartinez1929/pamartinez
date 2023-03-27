@@ -7,12 +7,14 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+const { languages, defaultLanguage } = require('./languages');
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `Frontend Developer and UX design - Pablo A Martinez`,
+    description: `Ideando productos digitales centrados en los objetivos del usuario. La importancia de un buen diseño parte de una necesidad, analiza, prototipa, ejecuta.`,
+    author: `@pmartinez1929`,
+    siteUrl: `https://pamartinez.com/`,
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -32,12 +34,66 @@ module.exports = {
         short_name: `starter`,
         start_url: `/`,
         background_color: `#663399`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon_pmartinez.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-omni-font-loader`,
+      options: {
+        enableListener: true,
+        preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
+        web: [
+          {
+            name: `Vidaloka`,
+            file: `https://fonts.googleapis.com/css2?family=Vidaloka&display=swap`,
+          },
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-omni-font-loader`,
+      options: {
+        enableListener: true,
+        preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
+        web: [
+          {
+            name: 'Quicksand',
+            file: `https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap`,
+          },
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/locales`,
+        name: `locale`
+      }
+    },
+    {
+      resolve: `gatsby-plugin-react-i18next`,
+      options: {
+        localeJsonSourceName: `locale`, // name given to `gatsby-source-filesystem` plugin.
+        languages: [`es`, `en`],
+        defaultLanguage: `es`,
+        siteUrl: `http://localhost:8000/`,
+        // if you are using trailingSlash gatsby config include it here, as well (the default is 'always')
+        trailingSlash: 'always',
+        // you can pass any i18next options
+        i18nextOptions: {
+          // debug: true,
+          fallbackLng: defaultLanguage,
+          supportedLngs: languages,
+          defaultNS: 'common',
+          keySeparator: false,
+          nsSeparator: false,
+          interpolation: {
+            escapeValue: false, // not needed for react as it escapes by default
+          },
+        }
+      }
+    }
   ],
+  assetPrefix: `https://pamartinez.com/`
 }

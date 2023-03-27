@@ -1,13 +1,15 @@
+
+
 :root {
   --border-radius: 4px;
-  --color-text: #333;
-  --color-primary: #7026b9;
-  --color-code-bg: #fff4db;
-  --color-code: #8a6534;
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-    "Courier New", monospace;
+  --color-1:#F1FAEE;
+  --color-2:#A8DADC;
+  --color-3:#457B9D;
+  --color-4:#1D3557;
+  --color-5:#E63946;
+  --color-text:#1E1E1E;
+  --font-serif: 'Vidaloka', serif;
+  --font-sans-serif: 'Quicksand', sans-serif;
   --font-lg: 18px;
   --font-md: 16px;
   --font-sm: 14px;
@@ -28,7 +30,6 @@
 html {
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
-  font: sans-serif;
   font-size: var(--font-md);
   line-height: var(--line-height-normal);
   overflow-y: scroll;
@@ -37,8 +38,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   color: var(--color-text);
-  font-family: sans-serif;
-  font-family: var(--font-sans);
+  font-family: var(--font-sans-serif);
   font-weight: normal;
   margin: 0;
   word-wrap: break-word;
@@ -83,6 +83,7 @@ h1 > b {
 img {
   border-style: none;
   max-width: 100%;
+  margin-bottom: 0 !important;
 }
 code,
 kbd,
@@ -221,4 +222,14 @@ pre code:after,
 pre tt:before,
 pre tt:after {
   content: none;
+}
+
+footer{
+  width: 100%;
+  background: var(--color-4);
+  padding: 16px;
+  color: white;
+  text-align: center;
+  position: relative;
+  z-index: 2;
 }

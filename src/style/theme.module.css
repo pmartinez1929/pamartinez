@@ -1,0 +1,90 @@
+.buttonRed{
+    background: var(--color-5);
+    color: white;
+    padding: 8px 31px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    display: inline;
+}
+.buttonRed:hover{
+    cursor: pointer;
+}
+.subtitle{
+    font-size: 14px;
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-weight: 500;
+    color: white;
+    width: fit-content;
+    margin-bottom: 20px;
+}
+.h3Title{
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 0 16px 0;
+}
+.buttonGreen{
+    width: 100%;
+    background: var(--color-1);
+    color: var(--color-4);
+    padding: 8px 31px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    display: inline;
+    text-align: center;
+    text-decoration: none;
+}
+.buttonGreen:hover{
+    cursor: pointer;
+}
+.separator{
+    height: 16px;
+}
+.circlesDecoration{
+    width: 100%;
+}
+.sectionPage{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.circleAbout1{
+    position: absolute;
+    top: -17%;
+    left: -31%;
+    width: 78%;
+    z-index: 0;
+}
+.circleAbout2{
+    position: absolute;
+    bottom: -25%;
+    right: -6%;
+    width: 25%;
+    z-index: 0;
+}
+.circleContact1{
+    position: absolute;
+    top: -30%;
+    left: -9%;
+    width: 45%;
+    z-index: 0;
+}
+.circleContact2{
+    position: absolute;
+    bottom: -25%;
+    right: -6%;
+    width: 25%;
+    z-index: 0;
+}
+
+@media screen and (max-width:420px) {
+    .buttonRed, .buttonGreen{
+        font-size: 16px;
+        padding: 8px 16px;
+
+    }
+}

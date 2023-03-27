@@ -1,0 +1,78 @@
+
+
+.containerContacts{
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    padding: 140px 0;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+.containerContacts h2{
+    font-size: 48px;
+    text-align: center;
+    color:var(--color-4);
+    margin: 0;
+    line-height: 48px;
+    font-family: var(--font-serif);
+}
+.containerContacts h3{
+    font-size: 64px;
+    text-align: center;
+    color:#B1B1B1;
+    margin: 0;
+    line-height: 64px;
+    font-family: var(--font-serif);
+    margin-bottom: 16px;
+}
+.containerContacts p{
+    text-align: center;
+}
+.contactButton{
+    display: flex;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+.iconContact{
+    width: 44px;
+    min-width: 44px;
+    height: 44px;
+    border-radius: 16px;
+    background: var(--color-4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px;
+}
+
+@media screen and (max-width:768px) {
+    .containerContacts{
+        max-width: 80%;
+        padding: 80px 24px;
+    }
+    .containerContacts h2{
+        font-size: 28px;
+        line-height: 28px;
+    }
+    .containerContacts h3{
+        font-size: 44px;
+        line-height: 44px;
+    }
+}
+
+@media screen and (max-width:420px) {
+    .containerContacts{
+        padding: 80px 24px;
+        max-width: 100%;
+    }
+    .containerContacts h2{
+        font-size: 24px;
+        line-height: 24px;
+    }
+    .containerContacts h3{
+        font-size: 32px;
+        line-height: 32px;
+    }
+}
